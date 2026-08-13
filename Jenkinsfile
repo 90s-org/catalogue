@@ -10,8 +10,8 @@ echo "Triggering the library pipeline"
 if ( env.BRANCH_NAME.equalsIgnoreCase('main') ){
     /* configMap["jiraProject"] = "ROBO"
     EKSMainPipeline(configMap) */
-    testPipeline(configMap)
+    nodejsEKSPipeline(configMap)
 }
 else{
-    testPipeline(configMap)
+    nodejsEKSPipeline(configMap)
 }
