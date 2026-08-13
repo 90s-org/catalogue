@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json .
 COPY *.js .
 # node_modules
-RUN npm install -g npm@latest && \
+RUN npm install -g npm@11 && \
     npm install 
 
 FROM node:20.20.2-alpine3.23
@@ -12,7 +12,7 @@ WORKDIR /app
 EXPOSE 8080
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue"
-RUN npm install -g npm@latest && \
+RUN npm install -g npm@11 && \
     apk update && apk upgrade --no-cache && \
     addgroup -S roboshop && adduser -S -G roboshop roboshop && \
     chown -R roboshop:roboshop /app
