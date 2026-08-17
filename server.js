@@ -29,7 +29,7 @@ let collection;
 let mongoConnected = false;
 
 const app = express();
-
+app.disable("x-powered-by");
 app.use(expLogger);
 
 app.use((req, res, next) => {
