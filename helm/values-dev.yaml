@@ -1,2 +1,3 @@
 hpa:
   cpuPercentage: 50
+namespace: roboshop-dev

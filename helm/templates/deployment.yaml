@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalogue
-  namespace: roboshop-dev
+  namespace: {{ .Values.namespace }}
   # labels related to deployment resource
   labels:
     project: roboshop
