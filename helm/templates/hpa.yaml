@@ -3,7 +3,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: catalogue
-  namespace: roboshop-dev
+  namespace: {{ .Values.namespace }}
   labels:
     project: roboshop
     tier: backend

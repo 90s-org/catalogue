@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalogue
-  namespace: roboshop-dev
+  namespace: {{ .Values.namespace }}
   # servicer labels
   labels:
     project: roboshop
