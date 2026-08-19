@@ -10,7 +10,10 @@ metadata:
     tier: backend
     component: catalogue
 spec:
-  replicas: 1
+  # No replicas field here on purpose — the HPA in hpa.yaml owns .spec.replicas
+  # via the scale subresource once it's running. Setting it here too makes every
+  # helm upgrade fight the HPA controller for field ownership and fail with a
+  # server-side-apply conflict.
   selector:
     matchLabels:
       project: roboshop
