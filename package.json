@@ -9,7 +9,8 @@
   "jest": {
     "coverageDirectory": "coverage",
     "coverageReporters": ["lcov", "text", "clover"],
-    "testResultsProcessor": "jest-junit"
+    "testResultsProcessor": "jest-junit",
+    "testPathIgnorePatterns": ["/node_modules/", "/smoke/"]
   },
   "author": "SteveW",
   "license": "Apache-2.0",
