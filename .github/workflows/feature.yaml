@@ -1,13 +1,24 @@
-name: call workflows
-on: workflow_dispatch 
-  #push: # Triggers the workflow on every push to the repository
-  
+name: catalogue-ci
+
+# Equivalent of the Jenkinsfile's `@Library('jenkins-shared-library') _` +
+# `nodejsEKSPipeline(configMap)` call — this repo just calls the shared
+# reusable workflow instead of copy-pasting the pipeline. Runs automatically
+# on every push to a feature branch (not main — main is the promotion path,
+# argocd-gitops-spec.md Phase C/D), and can also be run manually.
+on:
+  push:
+    branches-ignore:
+      - main
+  workflow_dispatch:
+
 jobs:
-  # Job name
   feature-pipeline:
     if: github.ref_name != 'main'
     uses: 90s-org/workflows/.github/workflows/nodejs-eks-ci.yaml@main
+    permissions:
+      contents: write
+      pull-requests: write
     with:
-      project: 'roboshop'
-      component: 'catalogue'
+      project: roboshop
+      component: catalogue
     secrets: inherit
