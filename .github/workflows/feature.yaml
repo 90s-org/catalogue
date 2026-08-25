@@ -1,7 +1,7 @@
 name: call workflows
-on: 
-  push: # Triggers the workflow on every push to the repository
-  workflow_dispatch:
+on: workflow_dispatch 
+  #push: # Triggers the workflow on every push to the repository
+  
 jobs:
   # Job name
   feature-pipeline:
