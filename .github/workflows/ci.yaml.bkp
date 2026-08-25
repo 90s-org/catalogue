@@ -1,0 +1,23 @@
+name: CI
+
+# Equivalent of the Jenkinsfile's `@Library('jenkins-shared-library') _` +
+# `nodejsEKSPipeline(configMap)` call — this repo just calls the shared
+# reusable workflow instead of copy-pasting the pipeline. Only feature
+# branches (not main), same as the Jenkinsfile's branch check; main is
+# the promotion path (argocd-gitops-spec.md Phase C/D), not this one.
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  build-test-deploy:
+    uses: 90s-org/workflows/.github/workflows/nodejs-eks-ci.yaml@main
+    permissions:
+      contents: write
+      pull-requests: write
+    with:
+      project: roboshop
+      component: catalogue
+      argocd-app: catalogue
+    secrets: inherit
