@@ -6,7 +6,7 @@ name: CI
 # branches (not main), same as the Jenkinsfile's branch check; main is
 # the promotion path (argocd-gitops-spec.md Phase C/D), not this one.
 on:
-  push:
+  push: 
     branches-ignore:
       - main
 
