@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest --testPathPattern=test/ --coverage --forceExit"
-  },
+  }, 
   "jest": {
     "coverageDirectory": "coverage",
     "coverageReporters": ["lcov", "text", "clover"],
