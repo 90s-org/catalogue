@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="17" failures="0" errors="0" time="25.234">
+  <testsuite name="Health Check" errors="0" failures="0" skipped="0" timestamp="2026-08-25T17:01:53" time="20.66" tests="17">
+    <testcase classname="Health Check GET /health returns 200 with app OK" name="Health Check GET /health returns 200 with app OK" time="0.04">
+    </testcase>
+    <testcase classname="Products GET /products returns array" name="Products GET /products returns array" time="0.009">
+    </testcase>
+    <testcase classname="Products GET /products/:cat returns filtered products" name="Products GET /products/:cat returns filtered products" time="0.01">
+    </testcase>
+    <testcase classname="Products GET /product/:sku returns product when found" name="Products GET /product/:sku returns product when found" time="0.016">
+    </testcase>
+    <testcase classname="Products GET /product/:sku returns 404 when not found" name="Products GET /product/:sku returns 404 when not found" time="0.008">
+    </testcase>
+    <testcase classname="Categories GET /categories returns array" name="Categories GET /categories returns array" time="0.01">
+    </testcase>
+    <testcase classname="Search GET /search/:text returns results array" name="Search GET /search/:text returns results array" time="0.007">
+    </testcase>
+    <testcase classname="MongoDB disconnected GET /products returns 500" name="MongoDB disconnected GET /products returns 500" time="0.012">
+    </testcase>
+    <testcase classname="MongoDB disconnected GET /product/:sku returns 500" name="MongoDB disconnected GET /product/:sku returns 500" time="0.008">
+    </testcase>
+    <testcase classname="MongoDB disconnected GET /products/:cat returns 500" name="MongoDB disconnected GET /products/:cat returns 500" time="0.007">
+    </testcase>
+    <testcase classname="MongoDB disconnected GET /categories returns 500" name="MongoDB disconnected GET /categories returns 500" time="0.009">
+    </testcase>
+    <testcase classname="MongoDB disconnected GET /search/:text returns 500" name="MongoDB disconnected GET /search/:text returns 500" time="0.006">
+    </testcase>
+    <testcase classname="DB error handling GET /products returns 500 on db error" name="DB error handling GET /products returns 500 on db error" time="0.007">
+    </testcase>
+    <testcase classname="DB error handling GET /product/:sku returns 500 on db error" name="DB error handling GET /product/:sku returns 500 on db error" time="0.008">
+    </testcase>
+    <testcase classname="DB error handling GET /products/:cat returns 500 on db error" name="DB error handling GET /products/:cat returns 500 on db error" time="0.007">
+    </testcase>
+    <testcase classname="DB error handling GET /categories returns 500 on db error" name="DB error handling GET /categories returns 500 on db error" time="0.007">
+    </testcase>
+    <testcase classname="DB error handling GET /search/:text returns 500 on db error" name="DB error handling GET /search/:text returns 500 on db error" time="0.007">
+    </testcase>
+  </testsuite>
+</testsuites>

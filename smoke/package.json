@@ -1,0 +1,16 @@
+{
+  "name": "catalogue-smoke-tests",
+  "version": "1.0.0",
+  "description": "Post-deploy smoke tests for catalogue — confirms the live service is up and its core routes respond correctly against a real deployment (e.g. roboshop-prod), with no mocking. Deliberately shallow: edge cases belong in catalogue's own unit tests, cross-service flows in roboshop-integration-tests/roboshop-regression-tests.",
+  "scripts": {
+    "test": "jest --testPathPattern=test/ --runInBand"
+  },
+  "jest": {
+    "testTimeout": 30000,
+    "reporters": ["default", "jest-junit"]
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-junit": "^16.0.0"
+  }
+}
