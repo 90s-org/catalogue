@@ -7,8 +7,6 @@ name: catalogue-ci
 # argocd-gitops-spec.md Phase C/D), and can also be run manually.
 on:
   push:
-    branches-ignore:
-      - main
   workflow_dispatch:
  
 jobs:
